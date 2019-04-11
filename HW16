@@ -1,0 +1,60 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+void translate_1(int);
+void map(int);
+int main(void)
+
+{
+	int num;
+	printf("輸入數字");
+	scanf("%d",&num);
+	translate_1(num);
+}
+
+void translate_1(int num)
+{
+		map(num/100);
+		printf("百");
+		map((num%100)/10);
+		printf("拾");
+	
+		map((num%100)%10);
+}
+void map(int number)
+{
+	switch(number)
+	{
+		case 0:
+			printf("零");
+			break;
+		case 1:
+			printf("壹");
+			break;
+		case 2:
+			printf("貳");
+			break;
+		case 3:
+			printf("參");
+			break;
+		case 4:
+			printf("肆");
+			break;
+		case 5:
+			printf("伍");
+			break;
+		case 6:
+			printf("陸");
+			break;
+		case 7:
+			printf("柒");
+			break;
+		case 8:
+			printf("捌");
+			break;
+		case 9:
+			printf("玖");
+			break;
+	}
+}
